@@ -1,0 +1,21 @@
+{
+  "name": "ProjectTwoT3",
+  "version": "1.0.0",
+  "description": "Repo for Project 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dreadpipe/ProjectTwoT3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dreadpipe/ProjectTwoT3/issues"
+  },
+  "homepage": "https://github.com/Dreadpipe/ProjectTwoT3#readme"
+}
