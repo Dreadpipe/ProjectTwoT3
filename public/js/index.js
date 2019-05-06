@@ -1,3 +1,16 @@
+// Button Functionality//
+$('#button-addon2').click(function(e){    
+  $('#pg1').fadeOut('slow', function(){
+      $('#pg2').fadeIn('slow');
+  });
+});
+
+$('#button-addon3').click(function(e){    
+  $('#pg2').fadeOut('slow', function(){
+      $('#pg1').fadeIn('slow');
+  });
+});
+
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
