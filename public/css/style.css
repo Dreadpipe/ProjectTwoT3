@@ -6,15 +6,23 @@
 
 #pg2 {
 
-    display:none;
+    display: none;
 }
+
+
+#button-addon3 {
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 
 /* BEGIN FOOTER */
 .footer {
     /* Positioning */
     position: absolute;
-    bottom: 0;
-  
+   
+    
     /* Box-model */
     width: 100%;
     height: 60px;
