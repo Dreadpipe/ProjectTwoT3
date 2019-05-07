@@ -17,6 +17,7 @@ var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
+//BEN'S NOTE: With a little bit of creativity, we can tweak these preset calls to our advantage.
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
@@ -43,6 +44,7 @@ var API = {
   }
 };
 
+// BEN'S NOTE: We may have need to pull all cocktails from a table.
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
   API.getExamples().then(function(data) {
@@ -72,6 +74,7 @@ var refreshExamples = function() {
   });
 };
 
+// BEN'S NOTE: This may be unnecessary.  We won't have a need for "new" cocktails (just yet).
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
@@ -95,6 +98,7 @@ var handleFormSubmit = function(event) {
   $exampleDescription.val("");
 };
 
+// BEN'S NOTE: This may be unnecessary.  I don't see us using a delete button.
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function() {
