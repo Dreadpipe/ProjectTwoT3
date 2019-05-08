@@ -3,6 +3,9 @@
     background-color: #56b2a9;
 }
 
+.jumbotron jumbotron-fluid {
+  margin: 0px;
+}
 
 #pg2 {
 
@@ -16,18 +19,26 @@
     margin-bottom: 50px;
 }
 
+#main-content {
+  padding-bottom: 50px;
+}
+
+#jumbo-text {
+  font-family: 'Dosis', sans-serif;
+  color: white;
+}
 
 /* BEGIN FOOTER */
 .footer {
     /* Positioning */
     /*NAVEE AND DANIEL, THIS MAY NEED TO GO*/
-    position: absolute;
+    position: fixed;
    
     
     /* Box-model */
     width: 100%;
     height: 60px;
-  
+    bottom: 0;
     /* Visual */
     background-color: #666;
   }
@@ -49,3 +60,6 @@
     background-color: #4aaaa5;
   }
   /* END FOOTER */
+  .footer-block {
+    margin: 20px 0;
+  }
