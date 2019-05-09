@@ -12,6 +12,12 @@
     display: none;
 }
 
+#search-button {
+  width: 150px;
+  text-align: center;
+  margin:20px auto;
+  padding: 10px;
+}
 
 #button-addon3 {
 

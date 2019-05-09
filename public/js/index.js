@@ -1,5 +1,5 @@
 // Button Functionality//
-$('#button-addon2').click(function(e){    
+$('.button-addon2').click(function(e){    
   $('#pg1').fadeOut('slow', function(){
       $('#pg2').fadeIn('slow');
   });
