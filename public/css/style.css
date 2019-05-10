@@ -1,14 +1,13 @@
 .jumbotron {
-
     background-color: #56b2a9;
 }
 
 .jumbotron jumbotron-fluid {
   margin: 0px;
+  padding: 0px;
 }
 
 #pg2 {
-
     display: none;
 }
 
@@ -19,14 +18,18 @@
   padding: 10px;
 }
 
-#button-addon3 {
+#category-buttons {
+text-align: center;
+padding: 10px;
+}
 
+#button-addon3 {
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
 #main-content {
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 }
 
 #jumbo-text {
