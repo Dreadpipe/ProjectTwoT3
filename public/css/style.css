@@ -26,6 +26,7 @@ padding-bottom: 30px;
 
 #pg2 {
     display: none;
+    background-color: #56b2a9;
 }
 
 #search-button {
@@ -43,6 +44,7 @@ padding: 10px;
 #button-addon3 {
     margin-top: 50px;
     margin-bottom: 50px;
+    
 }
 
 #main-content {
