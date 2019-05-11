@@ -1,3 +1,4 @@
+// Animation (new tech)
 var bouncingBall = anime({
   targets: 'path.st3, path.st4',
   translateY: '1.8vh',
@@ -20,10 +21,7 @@ anime({
 });
 
 
-
-
-
-// Button Functionality//
+// Button Functionality; swaps "pages" via fadeout//
 $('.button-addon2').click(function(e){    
   $('#pg1').fadeOut('slow', function(){
       $('#pg2').fadeIn('slow');
@@ -36,11 +34,19 @@ $('#button-addon3').click(function(e){
   });
 });
 
+// jQuery on click function
+$(document).on("click", "#search-button", function(event){
+  event.preventDefault();
+  $("")
+})
+
+// BEN NOTE: Below are preset "example" functions provided by Trilogy.
+// I have commented them out, but saved for reference.
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+// var $exampleText = $("#example-text");
+// var $exampleDescription = $("#example-description");
+// var $submitBtn = $("#submit");
+// var $exampleList = $("#example-list");
 
 //BEN'S NOTE: With a little bit of creativity, we can tweak these preset calls to our advantage.
 // The API object contains methods for each kind of request we'll make

@@ -24,21 +24,18 @@
                       </object>
                       
                       </div>
-                      <p class="h1 text-center">Old Fashioned</p>
+                      <p class="h1 text-center">boozeType: "Bourbon"</p>
               </div>
             </div>
       <!--Recipe-->
       <div class="container">
-          <table class="table table-striped text-center">
+          <table class="table table-striped text-center" id="recipetable">
               <thead>
-                <tr>
-                  <th scope="col">boozeType: "Bourbon"</th>
-                </tr>
-              </thead>
-              <tbody>
                 <tr>
                   <th scope="row">drinkName: "Old Fashioned"</th>
                 </tr>
+              </thead>
+              <tbody>
                 <tr>
                   <th scope="row">ingredients: "2 oz bourbon, 2 dashes bitters, 1 cube sugar, dash of water"</th>
                 </tr>
@@ -117,9 +114,9 @@
       <div class="container" id="main-content">
           <!--Search input-->
           <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Enter Drink Type">
+              <input type="text" class="form-control" id="inputfield" placeholder="Enter Drink Type">
               <div class="input-group">
-                <button type="button" class="btn btn-primary btn-md btn-block button-addon2" id="search-button"><i class="fas fa-cocktail" data-fa-transform="grow-10 up-15" style="color: black"></i>Try one on us!</button>
+                <button type="button" class="btn btn-primary btn-md btn-block button-addon2" id="search-button"><i class="fas fa-cocktail" data-fa-transform="grow-10 up-15" style="color: black"></i>Search it!</button>
               </div>
           </div>
       </div>  
@@ -129,13 +126,13 @@
       </div>
       <!--Category container-->  
       <div class="container" id="category-buttons">
-        <button type="button" class="btn btn-primary btn-lg col-2">Whiskey</button>
-        <button type="button" class="btn btn-primary btn-lg col-2">Vodka</button>
-        <button type="button" class="btn btn-primary btn-lg col-2">Tequila</button>
-        <button type="button" class="btn btn-primary btn-lg col-2">Rum</button>
+        <button type="button" class="btn btn-primary btn-lg col-2" id="whiskeybtn">Whiskey</button>
+        <button type="button" class="btn btn-primary btn-lg col-2" id="vodkabtn">Vodka</button>
+        <button type="button" class="btn btn-primary btn-lg col-2" id="tequilabtn">Tequila</button>
+        <button type="button" class="btn btn-primary btn-lg col-2" id="rumbtn">Rum</button>
       </div>
       <div class="container" id="category-buttons">
-        <button type="button" class="btn btn-primary btn-lg col-3">Random</button>
+        <button type="button" class="btn btn-primary btn-lg col-3" id="randombtn">Random</button>
       </div>
 
 <!-- Start of footer -->
