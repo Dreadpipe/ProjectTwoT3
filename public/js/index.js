@@ -71,8 +71,36 @@ function searchIt() {
 // https://www.thecocktaildb.com/api/json/v1/1/random.php
 function searchRandom() {
   fadeIn();
+  const randomURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
   console.log("searchRandom - I am functional.")
+
+  $.ajax({
+    url: randomURL,
+    method: "GET"
+  })
+    .then(function(response) {
+      const booze = response.drinks[0].strIngredient1;
+      const drink = response.drinks[0].strDrink;
+      const ingr1 = response.drinks[0].strIngredient2;
+      const ingr2 = response.drinks[0].strIngredient3;
+      const ingr3 = response.drinks[0].strIngredient4;
+      const ingr4 = response.drinks[0].strIngredient5;
+      const instruct = response.drinks[0].strInstructions;
+      console.log(booze + " " + drink + " " + ingr1 + " " + ingr2 + " " + ingr3 + " " + instruct);
+      $(".tblgo").empty();
+      $("#boozeID").text(booze);
+      $("#drinkName").text(drink);
+      $("#ingr1").text(ingr1);
+      $("#ingr2").text(ingr2);
+      $("#ingr3").text(ingr3);
+      $("#ingr4").text(ingr4)
+      $("#instructions").text(instruct);
+    });
+
 };
+
+
+
 
 
 // Button Functionality; swaps "pages" via fadeout//
