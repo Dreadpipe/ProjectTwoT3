@@ -61,9 +61,20 @@ function top10() {
   console.log("Top 10 - I am functiontal.")
 };
 
-// pulls boozeType from API
+// pulls boozeType from DATABASE
 function searchIt() {
   fadeIn();
+  $.get("/api/cocktails/" + boozeType, function(data){
+    $(".tblgo").empty();
+    if (!data) {
+      $("#boozeID").text("The well has run dry!  Try your search again.")
+    } else {
+      $("#boozeID").text(data.boozeType);
+      $("#drinkname").text(data.drinkName);
+      $("#ingr1").text(data.ingredients);
+      $("#instructions").text(data.instructions);
+    };
+  });
   console.log("searchIt - I am functional." + boozeType)
 };
 
@@ -98,7 +109,6 @@ function searchRandom() {
     });
 
 };
-
 
 
 

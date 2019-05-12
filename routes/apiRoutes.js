@@ -8,6 +8,23 @@ module.exports = function(app) {
     });
   });
 
+  // -------- THE KEY TO THE DATABASE IS SOMEWHERE IN HERE---------
+  app.get("api/cocktails/:cocktail?", function(req, res) {
+    if (req.params.boozeType) {
+      db.Cocktails.findOne({
+        where: {
+          boozeType: req.params.boozeType
+        }
+      }).then(function(result) {
+        return res.json(result);
+      });
+    } else {
+      db.Cocktails.findAll().then(function(result){
+        return res.json(result);
+      });
+    }
+  });
+
   // Create a new example
   app.post("/api/cocktails", function(req, res) {
     db.Cocktail.create({
