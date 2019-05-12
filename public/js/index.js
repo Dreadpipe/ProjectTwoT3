@@ -1,44 +1,88 @@
-// Animation (new tech)
-// var bouncingBall = anime({
-//   targets: 'path.st3, path.st4',
-//   translateY: '1.8vh',
-//   duration: 400,
-//   loop: true,
-//   direction: 'alternate',
-//   easing: 'easeInCubic'
-// });
+// Global variables
+let choicebtn = ".btnclass";
+let boozeType;
 
-// anime({
-//   targets: 'path.st1 , path.st2',
-//   rotateX: 35,
-//   rotateY: 15,
-//   scaleZ: 1,
-//   scaleY: 1,
-//   duration: 800,
-//   loop: true,
-//   direction: 'alternate',
-//   easing: 'easeInOutSine'
-// });
+
+// catch-all other on-clicks
+$(document).on("click", choicebtn, function (event) {
+  event.preventDefault();
+  let choice = $(this).attr("id");
+  console.log(choice);
+
+  // switch statements for buttons clicked
+  switch (choice) {
+    case "search-button":
+      top10();
+      fadeIn();
+      break;
+    case "vodkabtn":
+      boozeType = "vodka"
+      searchIt();
+      break;
+    case "whiskeybtn":
+      boozeType = "whiskey"
+      searchIt();
+      break;
+    case "rumbtn":
+      boozeType = "rum"
+      searchIt();
+      break;
+    case "tequilabtn":
+      boozeType = "tequila"
+      searchIt();
+      break;
+    case "randombtn":
+      searchRandom();
+      break;
+    case "button-addon3":
+      fadeOut();
+      break;
+  }
+});
+
+// fades to page 2
+function fadeIn() {
+  $("#pg1").fadeOut("slow", function () {
+    $("#pg2").fadeIn("slow");
+    console.log("I am working.")
+  });
+};
+
+// fades to page 1 
+function fadeOut() {
+    $('#pg2').fadeOut('slow', function () {
+      $('#pg1').fadeIn('slow');
+      console.log("I have to go now.")
+    });
+};
+
+// pulls from database
+function top10() {
+  console.log("Top 10 - I am functiontal.")
+};
+
+// pulls boozeType from API
+function searchIt() {
+  fadeIn();
+  console.log("searchIt - I am functional." + boozeType)
+};
+
+// pulls Random results from API
+// https://www.thecocktaildb.com/api/json/v1/1/random.php
+function searchRandom() {
+  fadeIn();
+  console.log("searchRandom - I am functional.")
+};
 
 
 // Button Functionality; swaps "pages" via fadeout//
-$('.button-addon2').click(function(e){    
-  $('#pg1').fadeOut('slow', function(){
-      $('#pg2').fadeIn('slow');
-  });
-});
+// $('.button-addon2').click(function(e){    
+//   $('#pg1').fadeOut('slow', function(){
+//       $('#pg2').fadeIn('slow');
+//   });
+// });
 
-$('#button-addon3').click(function(e){    
-  $('#pg2').fadeOut('slow', function(){
-      $('#pg1').fadeIn('slow');
-  });
-});
 
-// jQuery on click function - switch/statements
-$(document).on("click", "#search-button", function(event){
-  event.preventDefault();
-  $("")
-})
 
 // BEN NOTE: Below are preset "example" functions provided by Trilogy.
 // I have commented them out, but saved for reference.
@@ -48,100 +92,100 @@ $(document).on("click", "#search-button", function(event){
 // var $submitBtn = $("#submit");
 // var $exampleList = $("#example-list");
 
-//BEN'S NOTE: With a little bit of creativity, we can tweak these preset calls to our advantage.
-// The API object contains methods for each kind of request we'll make
-var API = {
-  saveExample: function(example) {
-    return $.ajax({
-      headers: {
-        "Content-Type": "application/json"
-      },
-      type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
-    });
-  },
-  getExamples: function() {
-    return $.ajax({
-      url: "api/examples",
-      type: "GET"
-    });
-  },
-  deleteExample: function(id) {
-    return $.ajax({
-      url: "api/examples/" + id,
-      type: "DELETE"
-    });
-  }
-};
+// //BEN'S NOTE: With a little bit of creativity, we can tweak these preset calls to our advantage.
+// // The API object contains methods for each kind of request we'll make
+// var API = {
+//   saveExample: function(example) {
+//     return $.ajax({
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       type: "POST",
+//       url: "api/cocktails",
+//       data: JSON.stringify(example)
+//     });
+//   },
+//   getExamples: function() {
+//     return $.ajax({
+//       url: "api/cocktails",
+//       type: "GET"
+//     });
+//   },
+//   deleteExample: function(id) {
+//     return $.ajax({
+//       url: "api/examples/" + id,
+//       type: "DELETE"
+//     });
+//   }
+// };
 
-// BEN'S NOTE: We may have need to pull all cocktails from a table.
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
-      var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+// // BEN'S NOTE: We may have need to pull all cocktails from a table.
+// // refreshExamples gets new examples from the db and repopulates the list
+// var refreshExamples = function() {
+//   API.getExamples().then(function(data) {
+//     var $examples = data.map(function(example) {
+//       var $a = $("<a>")
+//         .text(example.text)
+//         .attr("href", "/example/" + example.id);
 
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": example.id
-        })
-        .append($a);
+//       var $li = $("<li>")
+//         .attr({
+//           class: "list-group-item",
+//           "data-id": example.id
+//         })
+//         .append($a);
 
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
+//       var $button = $("<button>")
+//         .addClass("btn btn-danger float-right delete")
+//         .text("ｘ");
 
-      $li.append($button);
+//       $li.append($button);
 
-      return $li;
-    });
+//       return $li;
+//     });
 
-    $exampleList.empty();
-    $exampleList.append($examples);
-  });
-};
+//     $exampleList.empty();
+//     $exampleList.append($examples);
+//   });
+// };
 
-// BEN'S NOTE: This may be unnecessary.  We won't have a need for "new" cocktails (just yet).
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
-  event.preventDefault();
+// // BEN'S NOTE: This may be unnecessary.  We won't have a need for "new" cocktails (just yet).
+// // handleFormSubmit is called whenever we submit a new example
+// // Save the new example to the db and refresh the list
+// var handleFormSubmit = function(event) {
+//   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
-  };
+//   var example = {
+//     text: $exampleText.val().trim(),
+//     description: $exampleDescription.val().trim()
+//   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
-    return;
-  }
+//   if (!(example.text && example.description)) {
+//     alert("You must enter an example text and description!");
+//     return;
+//   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
-  });
+//   API.saveExample(example).then(function() {
+//     refreshExamples();
+//   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
-};
+//   $exampleText.val("");
+//   $exampleDescription.val("");
+// };
 
-// BEN'S NOTE: This may be unnecessary.  I don't see us using a delete button.
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
-  var idToDelete = $(this)
-    .parent()
-    .attr("data-id");
+// // BEN'S NOTE: This may be unnecessary.  I don't see us using a delete button.
+// // handleDeleteBtnClick is called when an example's delete button is clicked
+// // Remove the example from the db and refresh the list
+// var handleDeleteBtnClick = function() {
+//   var idToDelete = $(this)
+//     .parent()
+//     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
-  });
-};
+//   API.deleteExample(idToDelete).then(function() {
+//     refreshExamples();
+//   });
+// };
 
-// Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+// // Add event listeners to the submit and delete buttons
+// $submitBtn.on("click", handleFormSubmit);
+// $exampleList.on("click", ".delete", handleDeleteBtnClick);

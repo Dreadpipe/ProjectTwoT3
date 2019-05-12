@@ -22,9 +22,9 @@
                       <object>
                         <embed src="assets/oldfash.svg" width="30%" height="30%">
                       </object>
-                      
+                      <!--Giving booze type id of "boozeID"-->
                       </div>
-                      <p class="h1 text-center">boozeType: "Bourbon"</p>
+                      <p class="h1 text-center" id="boozeID">boozeType: "Bourbon"</p>
               </div>
             </div>
       <!--Recipe-->
@@ -33,20 +33,20 @@
           <table class="table table-striped text-center" id="recipetable">
               <thead>
                 <tr>
-                  <th scope="row">drinkName: "Old Fashioned"</th>
+                  <th id="drinkName" scope="row">drinkName: "Old Fashioned"</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">ingredients: "2 oz bourbon, 2 dashes bitters, 1 cube sugar, dash of water"</th>
+                  <th id="ingredients" scope="row">ingredients: "2 oz bourbon, 2 dashes bitters, 1 cube sugar, dash of water"</th>
                 </tr>
                 <tr>
-                  <th scope="row">instructions: "Place sugar cube in old fashioned glass and saturate with bitters, with dash of water. Fill the glass with ice cubes and bourbon."</th>
+                  <th id="instructions" scope="row">instructions: "Place sugar cube in old fashioned glass and saturate with bitters, with dash of water. Fill the glass with ice cubes and bourbon."</th>
                 </tr>
               </tbody>
             </table>
             
-                <button class="btn btn-secondary btn-lg" type="button" id="button-addon3">Back</button>
+                <button class="btn btn-secondary btn-lg btnclass" type="button" id="button-addon3">Back</button>
               </div>  
         
               </div>
@@ -120,7 +120,7 @@
           <div class="input-group mb-3">
               <input type="text" class="form-control" id="inputfield" placeholder="Enter Drink Type">
               <div class="input-group">
-                <button type="button" class="btn btn-primary btn-md btn-block button-addon2" id="search-button"><i class="fas fa-cocktail" data-fa-transform="grow-10 up-15" style="color: black"></i>Search it!</button>
+                <button type="button" class="btn btn-primary btn-md btn-block button-addon2 btnclass" id="search-button"><i class="fas fa-cocktail" data-fa-transform="grow-10 up-15" style="color: black"></i>Search it!</button>
               </div>
           </div>
       </div>  
@@ -130,13 +130,13 @@
       </div>
       <!--Category container-->  
       <div class="container" id="category-buttons">
-        <button type="button" class="btn btn-primary btn-lg col-2" id="whiskeybtn">Whiskey</button>
-        <button type="button" class="btn btn-primary btn-lg col-2" id="vodkabtn">Vodka</button>
-        <button type="button" class="btn btn-primary btn-lg col-2" id="tequilabtn">Tequila</button>
-        <button type="button" class="btn btn-primary btn-lg col-2" id="rumbtn">Rum</button>
+        <button type="button" class="btn btn-primary btn-lg col-2 btnclass" id="whiskeybtn">Whiskey</button>
+        <button type="button" class="btn btn-primary btn-lg col-2 btnclass" id="vodkabtn">Vodka</button>
+        <button type="button" class="btn btn-primary btn-lg col-2 btnclass" id="tequilabtn">Tequila</button>
+        <button type="button" class="btn btn-primary btn-lg col-2 btnclass" id="rumbtn">Rum</button>
       </div>
       <div class="container" id="category-buttons">
-        <button type="button" class="btn btn-primary btn-lg col-3" id="randombtn">Random</button>
+        <button type="button" class="btn btn-primary btn-lg col-3 btnclass" id="randombtn">Random</button>
       </div>
 
 <!-- Start of footer -->
