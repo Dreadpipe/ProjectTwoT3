@@ -1,4 +1,5 @@
 var db = require("../models");
+var sequelize = require("sequelize")
 
 module.exports = function(app) {
   // Get all examples
@@ -9,11 +10,17 @@ module.exports = function(app) {
   });
 
   // -------- THE KEY TO THE DATABASE IS SOMEWHERE IN HERE---------
-  app.get("api/cocktails/:cocktail?", function(req, res) {
-    if (req.params.boozeType) {
-      db.Cocktails.findOne({
+  app.get("/api/cocktails/:cocktail", function(req, res) {
+    console.log(req.params.cocktail);
+    console.log("Here we go");
+    if (req.params.cocktail) {
+      db.Cocktail.findOne({
+        order: 
+        [
+          sequelize.fn( 'RAND' ),
+        ],
         where: {
-          boozeType: req.params.boozeType
+          boozeType: req.params.cocktail
         }
       }).then(function(result) {
         return res.json(result);
@@ -27,6 +34,7 @@ module.exports = function(app) {
 
   // Create a new example
   app.post("/api/cocktails", function(req, res) {
+    console.log(req.body);
     db.Cocktail.create({
       boozeType: req.body.boozeType,
       drinkName: req.body.drinkName,
