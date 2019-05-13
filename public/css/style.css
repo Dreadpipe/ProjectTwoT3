@@ -91,3 +91,24 @@ padding: 10px;
   .footer-block {
     margin: 20px 0;
   }
+
+
+
+#drinkName {
+  font-family: 'Special Elite', cursive;
+  font-size: 30px;
+}
+
+#ingredients {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 30px;
+}
+
+#boozeID {
+  font-family: 'Special Elite', cursive;
+}
+
+#instructions {
+  font-family: 'Economica', sans-serif;
+  font-size: 200%;
+}
