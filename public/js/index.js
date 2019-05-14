@@ -109,25 +109,29 @@ function searchRandom() {
       );
       $(".tblgo").empty();
       $("#boozeID").text(booze);
-      $("#drinkName").text(drink);
+      $("#drinkName").text("The Twist (your cocktail): " + drink);
       $("#ingr1").text(ingr1);
       $("#ingr2").text(ingr2);
       $("#ingr3").text(ingr3);
       $("#ingr4").text(ingr4)
       $("#instructions").text(instruct);
     });
-
 };
 
-// test function for manual posts to database
 // DO NOT UNCOMMENT WITHOUT FOLLOWING INSTRUCTIONS
+// ---------- VARIABLES FOR FORM ------------
+// let formBooze = $("#formBooze").val().trim();
+// let formDrink = $("#formDrink").val().trim();
+// let formIngr = $("#formIngr").val().trim();
+// let formInstr = $("#formInstr").val().trim();
+
+// -------- SUBMIT BUTTON TO POST ------------
 // ATTACH TO SUBMIT BUTTON
 // $.post("/api/cocktails", {
-  // ---- POPULATE FIELDS WITH jQuery values instead of strings
-//   boozeType: "Vodka",
-//   drinkName: "Sex on teh Beach",
-//   ingredients: "3/4 oz peach schnapps, cranberry juice, grapefruit juice",
-//   instructions: "Build all ingredients in a high ball glass, stir and garnish with orangle slice."
+//   boozeType: formBooze,
+//   drinkName: formDrink,
+//   ingredients: formIngr,
+//   instructions: formInstr
 // }).then(function(data) {
 //   console.log(data);
 // });
