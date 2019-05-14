@@ -32,11 +32,11 @@ $(document).on("click", choicebtn, function (event) {
       searchIt();
       break;
       case "brandybtn":
-      boozeType = "brandy"
+      boozeType = "Brandy"
       searchIt();
       break;
       case "ginbtn":
-      boozeType = "gin"
+      boozeType = "Gin"
       searchIt();
       break;
     case "randombtn":
@@ -167,29 +167,41 @@ function searchRandom() {
       );
       $(".tblgo").empty();
       $("#boozeID").text(booze);
-      $("#drinkName").text(drink);
+      $("#drinkName").text('The poison: "' + drink + '"');
       $("#ingr1").text(ingr1);
       $("#ingr2").text(ingr2);
       $("#ingr3").text(ingr3);
       $("#ingr4").text(ingr4)
       $("#instructions").text(instruct);
     });
-
 };
 
-// test function for manual posts to database
 // DO NOT UNCOMMENT WITHOUT FOLLOWING INSTRUCTIONS
+// ---------- VARIABLES FOR FORM ------------
+// let formBooze = $("#formBooze").val().trim();
+// let formDrink = $("#formDrink").val().trim();
+// let formIngr = $("#formIngr").val().trim();
+// let formInstr = $("#formInstr").val().trim();
+
+// -------- SUBMIT BUTTON TO POST ------------
 // ATTACH TO SUBMIT BUTTON
 // $.post("/api/cocktails", {
-  // ---- POPULATE FIELDS WITH jQuery values instead of strings
-//   boozeType: "Vodka",
-//   drinkName: "Sex on teh Beach",
-//   ingredients: "3/4 oz peach schnapps, cranberry juice, grapefruit juice",
-//   instructions: "Build all ingredients in a high ball glass, stir and garnish with orangle slice."
+//   boozeType: formBooze,
+//   drinkName: formDrink,
+//   ingredients: formIngr,
+//   instructions: formInstr
 // }).then(function(data) {
 //   console.log(data);
 // });
 
+// $.post("/api/cocktails", {
+//   boozeType: "Brandy",
+//   drinkName: "Dirty White Mother",
+//   ingredients: "1 part Brandy, 1 part Cream, 2/3 Kahlua",
+//   instructions: "Fill a shaker with ice cubes.  Add all inredients.  Shake and strain into a rocks glass filled with ice cubes."
+// }).then(function(data) {
+//   console.log(data);
+// });
 
 // Button Functionality; swaps "pages" via fadeout//
 // $('.button-addon2').click(function(e){    
