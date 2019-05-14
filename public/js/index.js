@@ -31,6 +31,14 @@ $(document).on("click", choicebtn, function (event) {
       boozeType = "tequila"
       searchIt();
       break;
+      case "brandybtn":
+      boozeType = "brandy"
+      searchIt();
+      break;
+      case "ginbtn":
+      boozeType = "gin"
+      searchIt();
+      break;
     case "randombtn":
       searchRandom();
       break;
@@ -39,6 +47,56 @@ $(document).on("click", choicebtn, function (event) {
       break;
   }
 });
+
+// Wrap every letter in a span "Feeling Lucky?"
+$('.ml13').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml13 .letter',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: function(el, i) {
+      return 300 + 30 * i;
+    }
+  }).add({
+    targets: '.ml13 .letter',
+    translateY: [0,-100],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1200,
+    delay: function(el, i) {
+      return 100 + 30 * i;
+    }
+  });
+
+// Wrap every letter in a span "Pick Your Poison!"
+$('.ml3').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: function(el, i) {
+      return 150 * (i+1)
+    }
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
 
 // fades to page 2
 function fadeIn() {
