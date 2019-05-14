@@ -32,11 +32,11 @@ $(document).on("click", choicebtn, function (event) {
       searchIt();
       break;
       case "brandybtn":
-      boozeType = "brandy"
+      boozeType = "Brandy"
       searchIt();
       break;
       case "ginbtn":
-      boozeType = "gin"
+      boozeType = "Gin"
       searchIt();
       break;
     case "randombtn":
@@ -167,7 +167,7 @@ function searchRandom() {
       );
       $(".tblgo").empty();
       $("#boozeID").text(booze);
-      $("#drinkName").text("The Twist (your cocktail): " + drink);
+      $("#drinkName").text('The poison: "' + drink + '"');
       $("#ingr1").text(ingr1);
       $("#ingr2").text(ingr2);
       $("#ingr3").text(ingr3);
@@ -194,6 +194,14 @@ function searchRandom() {
 //   console.log(data);
 // });
 
+// $.post("/api/cocktails", {
+//   boozeType: "Brandy",
+//   drinkName: "Dirty White Mother",
+//   ingredients: "1 part Brandy, 1 part Cream, 2/3 Kahlua",
+//   instructions: "Fill a shaker with ice cubes.  Add all inredients.  Shake and strain into a rocks glass filled with ice cubes."
+// }).then(function(data) {
+//   console.log(data);
+// });
 
 // Button Functionality; swaps "pages" via fadeout//
 // $('.button-addon2').click(function(e){    
