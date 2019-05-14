@@ -31,6 +31,14 @@ $(document).on("click", choicebtn, function (event) {
       boozeType = "Tequila"
       searchIt();
       break;
+      case "brandybtn":
+      boozeType = "brandy"
+      searchIt();
+      break;
+      case "ginbtn":
+      boozeType = "gin"
+      searchIt();
+      break;
     case "randombtn":
       searchRandom();
       break;
@@ -39,6 +47,56 @@ $(document).on("click", choicebtn, function (event) {
       break;
   }
 });
+
+// Wrap every letter in a span "Feeling Lucky?"
+$('.ml13').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml13 .letter',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: function(el, i) {
+      return 300 + 30 * i;
+    }
+  }).add({
+    targets: '.ml13 .letter',
+    translateY: [0,-100],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1200,
+    delay: function(el, i) {
+      return 100 + 30 * i;
+    }
+  });
+
+// Wrap every letter in a span "Pick Your Poison!"
+$('.ml3').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: function(el, i) {
+      return 150 * (i+1)
+    }
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
 
 // fades to page 2
 function fadeIn() {
@@ -109,25 +167,29 @@ function searchRandom() {
       );
       $(".tblgo").empty();
       $("#boozeID").text(booze);
-      $("#drinkName").text(drink);
+      $("#drinkName").text("The Twist (your cocktail): " + drink);
       $("#ingr1").text(ingr1);
       $("#ingr2").text(ingr2);
       $("#ingr3").text(ingr3);
       $("#ingr4").text(ingr4)
       $("#instructions").text(instruct);
     });
-
 };
 
-// test function for manual posts to database
 // DO NOT UNCOMMENT WITHOUT FOLLOWING INSTRUCTIONS
+// ---------- VARIABLES FOR FORM ------------
+// let formBooze = $("#formBooze").val().trim();
+// let formDrink = $("#formDrink").val().trim();
+// let formIngr = $("#formIngr").val().trim();
+// let formInstr = $("#formInstr").val().trim();
+
+// -------- SUBMIT BUTTON TO POST ------------
 // ATTACH TO SUBMIT BUTTON
 // $.post("/api/cocktails", {
-  // ---- POPULATE FIELDS WITH jQuery values instead of strings
-//   boozeType: "Vodka",
-//   drinkName: "Sex on teh Beach",
-//   ingredients: "3/4 oz peach schnapps, cranberry juice, grapefruit juice",
-//   instructions: "Build all ingredients in a high ball glass, stir and garnish with orangle slice."
+//   boozeType: formBooze,
+//   drinkName: formDrink,
+//   ingredients: formIngr,
+//   instructions: formInstr
 // }).then(function(data) {
 //   console.log(data);
 // });
