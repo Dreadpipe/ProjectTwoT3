@@ -1,5 +1,10 @@
+.form-group {
+  text-align: center;
+}
 
-
+.submit {
+  text-align: center;
+}
 
 .jumbotron {
     background-color: #56b2a9;
@@ -302,6 +307,7 @@ padding: 10px;
     /* Box-model */
     height: 6px;
     padding-top: 3px;
+    width: 100%;
   
     /* Visual */
     background-color: #4aaaa5;
