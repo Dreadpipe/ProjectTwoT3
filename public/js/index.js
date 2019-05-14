@@ -1,3 +1,7 @@
+$(function() {
+  $('body').scrollTop(0);
+});
+
 // Global variables
 let choicebtn = ".btnclass";
 let boozeType;

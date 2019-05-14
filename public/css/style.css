@@ -12,8 +12,8 @@
 
 #Logo {
 
- width: 40%;
- height: 40%;
+ width: 47%;
+ height: 47%;
  padding-bottom: 50px;
 
 }
@@ -32,11 +32,33 @@ padding-bottom: 30px;
 }
 
 .ml3 {
-  font-weight: 300;
-  font-size: 2.5em;
+  font-weight: 900;
+  font-size: 4.5em;
   color: white;
-  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  text-align: center;
 }
+
+.card-deck {
+
+  padding: 40px;
+
+}
+
+.card-body {
+
+  padding-top: 50px;
+
+}
+
+.card {
+  background-color: #56b2a9;
+  border: 0;
+}
+
+
 
 #randombtn {
     background-color: hsl(36, 100%, 22%) !important;
@@ -62,6 +84,8 @@ padding-bottom: 30px;
     border:6px solid #d88223;
     display:inline-block;
     cursor:pointer;
+    font-size: 2em;
+    
 
     
   }
@@ -90,6 +114,9 @@ padding-bottom: 30px;
     border:6px solid #b53628;
     display:inline-block;
     cursor:pointer;
+    font-size: 2em;
+    
+    
   
     
   }
@@ -118,6 +145,7 @@ padding-bottom: 30px;
     border:6px solid #8c2248;
     display:inline-block;
     cursor:pointer;
+    font-size: 2em;
    
     
   }
@@ -146,7 +174,7 @@ padding-bottom: 30px;
     border:6px solid #471643;
     display:inline-block;
     cursor:pointer;
-  
+    font-size: 2em;
     
   }
 
@@ -174,7 +202,7 @@ padding-bottom: 30px;
     border:6px solid #787f32;
     display:inline-block;
     cursor:pointer;
-    
+    font-size: 2em;
     
   }
 
@@ -202,7 +230,7 @@ padding-bottom: 30px;
     border:6px solid #0c3d2e;
     display:inline-block;
     cursor:pointer;
-  
+    font-size: 2em;
     
   }
 
@@ -231,7 +259,7 @@ padding-bottom: 30px;
     border:6px solid #355975;
     display:inline-block;
     cursor:pointer;
-
+    font-size: 2em;
     
   }
 
