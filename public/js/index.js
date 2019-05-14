@@ -178,21 +178,35 @@ function searchRandom() {
 
 // DO NOT UNCOMMENT WITHOUT FOLLOWING INSTRUCTIONS
 // ---------- VARIABLES FOR FORM ------------
-// let formBooze = $("#formBooze").val().trim();
-// let formDrink = $("#formDrink").val().trim();
-// let formIngr = $("#formIngr").val().trim();
-// let formInstr = $("#formInstr").val().trim();
+
 
 // -------- SUBMIT BUTTON TO POST ------------
 // ATTACH TO SUBMIT BUTTON
-// $.post("/api/cocktails", {
-//   boozeType: formBooze,
-//   drinkName: formDrink,
-//   ingredients: formIngr,
-//   instructions: formInstr
-// }).then(function(data) {
-//   console.log(data);
-// });
+$(document).on("click", "#submitbtn", function(event) {
+  // prevents fuckery
+  event.preventDefault();
+  // sets values within form
+  let formBooze = $("#formBooze").val()
+  let formDrink = $("#formDrink").val().trim();
+  let formIngr = $("#formIngr").val().trim();
+  let formInstr = $("#formInstr").val().trim();
+  // posts to the database
+  $.post("/api/cocktails", {
+    boozeType: formBooze,
+    drinkName: formDrink,
+    ingredients: formIngr,
+    instructions: formInstr
+  }).then(function(data) {
+    console.log(data);
+    // clears the form upon success
+    $("#formDrink").val(" ");
+    $("#formIngr").val(" ");
+    $("#formInstr").val(" ");
+    $("#formBooze").val("Choose One");
+    // changes the button text
+    $("#submitbtn").html("Added!");
+  });
+});
 
 // $.post("/api/cocktails", {
 //   boozeType: "Brandy",
