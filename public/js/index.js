@@ -16,19 +16,19 @@ $(document).on("click", choicebtn, function (event) {
       fadeIn();
       break;
     case "vodkabtn":
-      boozeType = "vodka"
+      boozeType = "Vodka"
       searchIt();
       break;
     case "whiskeybtn":
-      boozeType = "whiskey"
+      boozeType = "Whiskey"
       searchIt();
       break;
     case "rumbtn":
-      boozeType = "rum"
+      boozeType = "Rum"
       searchIt();
       break;
     case "tequilabtn":
-      boozeType = "tequila"
+      boozeType = "Tequila"
       searchIt();
       break;
       case "brandybtn":
@@ -108,10 +108,10 @@ function fadeIn() {
 
 // fades to page 1 
 function fadeOut() {
-    $('#pg2').fadeOut('slow', function () {
-      $('#pg1').fadeIn('slow');
-      console.log("I have to go now.")
-    });
+  $('#pg2').fadeOut('slow', function () {
+    $('#pg1').fadeIn('slow');
+    console.log("I have to go now.")
+  });
 };
 
 // pulls from database
@@ -119,9 +119,22 @@ function top10() {
   console.log("Top 10 - I am functiontal.")
 };
 
-// pulls boozeType from API
+// pulls boozeType from DATABASE
 function searchIt() {
   fadeIn();
+  console.log(boozeType);
+  $.get("/api/cocktails/" + boozeType, function (data) {
+    $(".tblgo").empty();
+    console.log(data);
+    if (!data) {
+      $("#boozeID").text("The well has run dry!  Try your search again.")
+    } else {
+      $("#boozeID").text(data.boozeType);
+      $("#drinkName").text(data.drinkName);
+      $("#ingr1").text(data.ingredients);
+      $("#instructions").text(data.instructions);
+    };
+  });
   console.log("searchIt - I am functional." + boozeType)
 };
 
@@ -133,10 +146,10 @@ function searchRandom() {
   console.log("searchRandom - I am functional.")
 
   $.ajax({
-    url: randomURL,
-    method: "GET"
-  })
-    .then(function(response) {
+      url: randomURL,
+      method: "GET"
+    })
+    .then(function (response) {
       const booze = response.drinks[0].strIngredient1;
       const drink = response.drinks[0].strDrink;
       const ingr1 = response.drinks[0].strIngredient2;
@@ -144,7 +157,14 @@ function searchRandom() {
       const ingr3 = response.drinks[0].strIngredient4;
       const ingr4 = response.drinks[0].strIngredient5;
       const instruct = response.drinks[0].strInstructions;
-      console.log(booze + " " + drink + " " + ingr1 + " " + ingr2 + " " + ingr3 + " " + instruct);
+      console.log(
+        booze + " " +
+        drink + " " +
+        ingr1 + " " +
+        ingr2 + " " +
+        ingr3 + " " +
+        instruct
+      );
       $(".tblgo").empty();
       $("#boozeID").text(booze);
       $("#drinkName").text(drink);
@@ -157,8 +177,18 @@ function searchRandom() {
 
 };
 
-
-
+// test function for manual posts to database
+// DO NOT UNCOMMENT WITHOUT FOLLOWING INSTRUCTIONS
+// ATTACH TO SUBMIT BUTTON
+// $.post("/api/cocktails", {
+  // ---- POPULATE FIELDS WITH jQuery values instead of strings
+//   boozeType: "Vodka",
+//   drinkName: "Sex on teh Beach",
+//   ingredients: "3/4 oz peach schnapps, cranberry juice, grapefruit juice",
+//   instructions: "Build all ingredients in a high ball glass, stir and garnish with orangle slice."
+// }).then(function(data) {
+//   console.log(data);
+// });
 
 
 // Button Functionality; swaps "pages" via fadeout//

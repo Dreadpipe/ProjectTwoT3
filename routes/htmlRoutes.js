@@ -1,4 +1,5 @@
 var db = require("../models");
+var path = require ("path");
 
 module.exports = function(app) {
   // Load index page
@@ -11,7 +12,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/form.html"));
   });
 
-  // blog route loads blog.html
+  // * takes us back to home page (all)
   app.get("/index", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
