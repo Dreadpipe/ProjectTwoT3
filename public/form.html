@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title>Add A Drink</title>
+    <meta charset = "UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Economica|Luckiest+Guy|Playfair+Display+SC|Special+Elite"
+    rel="stylesheet">
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container" id="formJumbo">
+            <h1 class="display-3">Add a Drink!</h1>
+        </div>
+    </div>
+    <form class="col-lg-6 offset-lg-3" id="formPage">
+        <div class="form-group" id="form-page">
+          <label for="exampleFormControlInput1">Enter Drink Name: </label>
+          <input type="email" class="form-control formClr" id="formDrink" placeholder='"Whiskey Sour"''>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Alcohol Type</label>
+          <select class="form-control" id="formBooze">
+            <option value="default" selected disabled>Choose One</option>
+            <option>Whiskey</option>
+            <option>Vodka</option>
+            <option>Tequila</option>
+            <option>Rum</option>
+            <option>Gin</option>
+            <option>Brandy</option>
+          </select>
+        </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Add Ingredients: </label>
+                <input type="email" class="form-control formClr" id="formIngr" placeholder="Bitters, Lime, etc..">
+                <br>
+
+              </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Instructions: </label>
+          <textarea class="form-control formClr" id="formInstr" rows="3" placeholder="Add Instructions Here..."></textarea>
+        </div>
+        <div class="submit">
+            <button type="button" class="btn btn-primary btn-lg col-3 btnclass" id="submitbtn">Add!</button>
+            <a href="./index.html" class="btn btn-primary btn-lg col-3" role="button">Back</a>
+        </div>
+      </form>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/logo.js"></script>
+</html>
