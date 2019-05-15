@@ -1,5 +1,5 @@
 $(function() {
-  $('body').scrollTop(0);
+  $(window).scrollTop($("#top").offset().top);
 });
 
 // Global variables
@@ -104,6 +104,9 @@ anime.timeline({loop: true})
 // fades to page 2
 function fadeIn() {
   $("#pg1").fadeOut("slow", function () {
+    $(function() {
+      $(window).scrollTop($("#top").offset().top);
+    });
     $("#pg2").fadeIn("slow");
     console.log("I am working.")
   });
@@ -127,6 +130,9 @@ function drinkRand() {
 // fades to page 1 
 function fadeOut() {
   $('#pg2').fadeOut('slow', function () {
+    $(function() {
+      $(window).scrollTop($("#top").offset().top);
+    });
     $("#picDiv").empty();
     $('#pg1').fadeIn('slow');
     console.log("I have to go now.")
