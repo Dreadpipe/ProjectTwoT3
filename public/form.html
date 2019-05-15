@@ -1,13 +1,20 @@
 <!DOCTYPE HTML>
 <html lang = "en">
   <head>
-    <title>Mixer</title>
+    <title>Add A Drink</title>
     <meta charset = "UTF-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Economica|Luckiest+Guy|Playfair+Display+SC|Special+Elite"
+    rel="stylesheet">
   </head>
   <body>
-    <form class="col-lg-6 offset-lg-3">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container" id="formJumbo">
+            <h1 class="display-3">Add a Drink!</h1>
+        </div>
+    </div>
+    <form class="col-lg-6 offset-lg-3" id="formPage">
         <div class="form-group" id="form-page">
           <label for="exampleFormControlInput1">Enter Drink Name: </label>
           <input type="email" class="form-control formClr" id="formDrink" placeholder='"Whiskey Sour"''>
@@ -36,6 +43,7 @@
         </div>
         <div class="submit">
             <button type="button" class="btn btn-primary btn-lg col-3 btnclass" id="submitbtn">Add!</button>
+            <a href="./index.html" class="btn btn-primary btn-lg col-3" role="button">Back</a>
         </div>
       </form>
   </body>
