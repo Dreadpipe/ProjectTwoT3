@@ -8,11 +8,10 @@ let boozeType;
 
 
 // catch-all other on-clicks
-$(document).on("click", choicebtn, function (event) {
+$(document).on("click", choicebtn, function(event) {
   event.preventDefault();
   let choice = $(this).attr("id");
   console.log(choice);
-
   // switch statements for buttons clicked
   switch (choice) {
     case "search-button":
@@ -20,27 +19,27 @@ $(document).on("click", choicebtn, function (event) {
       fadeIn();
       break;
     case "vodkabtn":
-      boozeType = "Vodka"
+      boozeType = "Vodka";
       searchIt();
       break;
     case "whiskeybtn":
-      boozeType = "Whiskey"
+      boozeType = "Whiskey";
       searchIt();
       break;
     case "rumbtn":
-      boozeType = "Rum"
+      boozeType = "Rum";
       searchIt();
       break;
     case "tequilabtn":
-      boozeType = "Tequila"
+      boozeType = "Tequila";
       searchIt();
       break;
-      case "brandybtn":
-      boozeType = "Brandy"
+    case "brandybtn":
+      boozeType = "Brandy";
       searchIt();
       break;
-      case "ginbtn":
-      boozeType = "Gin"
+    case "ginbtn":
+      boozeType = "Gin";
       searchIt();
       break;
     case "randombtn":
@@ -110,9 +109,25 @@ function fadeIn() {
   });
 };
 
+// hides old fashioned animation
+function drinkKill() {
+  $(".ninjaVanish").hide();
+};
+
+// appends booze pic to HTML on search
+function mixIt() {
+  $("#picDiv").prepend("<img style='height:200; width:200px' src='/assets/Final" + boozeType + ".png'/>");
+};
+
+// returns old fashioned animation
+function drinkRand() {
+  $(".ninjaVanish").show();
+};
+
 // fades to page 1 
 function fadeOut() {
   $('#pg2').fadeOut('slow', function () {
+    $("#picDiv").empty();
     $('#pg1').fadeIn('slow');
     console.log("I have to go now.")
   });
@@ -125,8 +140,9 @@ function top10() {
 
 // pulls boozeType from DATABASE
 function searchIt() {
+  drinkKill();
+  mixIt();
   fadeIn();
-  console.log(boozeType);
   $.get("/api/cocktails/" + boozeType, function (data) {
     $(".tblgo").empty();
     console.log(data);
@@ -145,6 +161,7 @@ function searchIt() {
 // pulls Random results from API
 // https://www.thecocktaildb.com/api/json/v1/1/random.php
 function searchRandom() {
+  drinkRand();
   fadeIn();
   const randomURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
   console.log("searchRandom - I am functional.")
@@ -179,10 +196,6 @@ function searchRandom() {
       $("#instructions").text(instruct);
     });
 };
-
-// DO NOT UNCOMMENT WITHOUT FOLLOWING INSTRUCTIONS
-// ---------- VARIABLES FOR FORM ------------
-
 
 // -------- SUBMIT BUTTON TO POST ------------
 // ATTACH TO SUBMIT BUTTON
