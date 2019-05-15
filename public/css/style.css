@@ -1,370 +1,50 @@
-.form-group {
-  text-align: center;
-}
-
-.submit {
-  text-align: center;
-}
-
 .jumbotron {
+
     background-color: #56b2a9;
 }
 
-.jumbotron jumbotron-fluid {
-  margin: 0px;
-  padding: 0px;
-}
-
-#Logo {
-
- width: 47%;
- height: 47%;
- padding-bottom: 50px;
-
-}
-
-#Layer_2 {
-
-  width: 30%;
-  height: 30%;
-
-}
-
-#jumbo-text.h2.text-center {
-
-padding-bottom: 30px;
-
-}
-
-.ml3 {
-  font-weight: 900;
-  font-size: 4.5em;
-  color: white;
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-  text-align: center;
-}
-
-.card-deck {
-
-  padding: 40px;
-
-}
-
-.card-body {
-
-  padding-top: 50px;
-
-}
-
-.card {
-  background-color: #56b2a9;
-  border: 0;
-}
-
-
-
-#randombtn {
-    background-color: hsl(36, 100%, 22%) !important;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ec9525", endColorstr="#704300");
-    background-image: -khtml-gradient(linear, left top, left bottom, from(#ec9525), to(#704300));
-    background-image: -moz-linear-gradient(top, #ec9525, #704300);
-    background-image: -ms-linear-gradient(top, #ec9525, #704300);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec9525), color-stop(100%, #704300));
-    background-image: -webkit-linear-gradient(top, #ec9525, #704300);
-    background-image: -o-linear-gradient(top, #ec9525, #704300);
-    background-image: linear-gradient(#ec9525, #704300);
-    border-color: #704300 #704300 hsl(36, 100%, 17%);
-    color: #fff !important;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow: 0px 0px 10px 2px #ec9525;
-    -webkit-box-shadow: 0px 0px 10px 2px #ec9525;
-    box-shadow: 0px 0px 10px 2px #ec9525;
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    border:6px solid #d88223;
-    display:inline-block;
-    cursor:pointer;
-    font-size: 2em;
-    
-
-    
-  }
-
-  #whiskeybtn {
-    background-color: hsl(36, 100%, 22%) !important;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dd442e", endColorstr="#560b00");
-    background-image: -khtml-gradient(linear, left top, left bottom, from(#dd442e), to(#560b00));
-    background-image: -moz-linear-gradient(top, #dd442e, #560b00);
-    background-image: -ms-linear-gradient(top, #dd442e, #560b00);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dd442e), color-stop(100%, #560b00));
-    background-image: -webkit-linear-gradient(top, #dd442e, #560b00);
-    background-image: -o-linear-gradient(top, #dd442e, #560b00);
-    background-image: linear-gradient(#dd442e, #560b00);
-    border-color: #704300 #704300 hsl(36, 100%, 17%);
-    color: #fff !important;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow: 0px 0px 10px 2px #dd442e;
-    -webkit-box-shadow: 0px 0px 10px 2px #dd442e;
-    box-shadow: 0px 0px 10px 2px #dd442e;
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    border:6px solid #b53628;
-    display:inline-block;
-    cursor:pointer;
-    font-size: 2em;
-    
-    
-  
-    
-  }
-
-  #vodkabtn {
-    background-color: hsl(36, 100%, 22%) !important;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ad2851", endColorstr="#56003f");
-    background-image: -khtml-gradient(linear, left top, left bottom, from(#ad2851), to(#56003f));
-    background-image: -moz-linear-gradient(top, #ad2851, #56003f);
-    background-image: -ms-linear-gradient(top, #ad2851, #56003f);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ad2851), color-stop(100%, #56003f));
-    background-image: -webkit-linear-gradient(top, #ad2851, #56003f);
-    background-image: -o-linear-gradient(top, #ad2851, #56003f);
-    background-image: linear-gradient(#ad2851, #56003f);
-    border-color: #704300 #704300 hsl(36, 100%, 17%);
-    color: #fff !important;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow: 0px 0px 10px 2px #ad2851;
-    -webkit-box-shadow: 0px 0px 10px 2px #ad2851;
-    box-shadow: 0px 0px 10px 2px #ad2851;
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    border:6px solid #8c2248;
-    display:inline-block;
-    cursor:pointer;
-    font-size: 2em;
-   
-    
-  }
-
-  #brandybtn {
-    background-color: hsl(36, 100%, 22%) !important;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6c2161", endColorstr="#1d0c21");
-    background-image: -khtml-gradient(linear, left top, left bott0om, from(#6c2161), to(#1d0c21));
-    background-image: -moz-linear-gradient(top, #6c2161, #1d0c21);
-    background-image: -ms-linear-gradient(top, #6c2161, #1d0c21);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6c2161), color-stop(100%, #1d0c21));
-    background-image: -webkit-linear-gradient(top, #6c2161, #1d0c21);
-    background-image: -o-linear-gradient(top, #6c2161, #1d0c21);
-    background-image: linear-gradient(#6c2161, #1d0c21);
-    border-color: #704300 #704300 hsl(36, 100%, 17%);
-    color: #fff !important;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow: 0px 0px 10px 2px #6c2161;
-    -webkit-box-shadow: 0px 0px 10px 2px #6c2161;
-    box-shadow: 0px 0px 10px 2px #6c2161;
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    border:6px solid #471643;
-    display:inline-block;
-    cursor:pointer;
-    font-size: 2em;
-    
-  }
-
-  #tequilabtn {
-    background-color: hsl(36, 100%, 22%) !important;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12654d", endColorstr="#173e29");
-    background-image: -khtml-gradient(linear, left top, left bott0om, from(#a1b044), to(#485600));
-    background-image: -moz-linear-gradient(top, #a1b044, #485600);
-    background-image: -ms-linear-gradient(top, #a1b044, #485600);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a1b044), color-stop(100%, #485600));
-    background-image: -webkit-linear-gradient(top, #a1b044, #485600);
-    background-image: -o-linear-gradient(top, #a1b044, #485600);
-    background-image: linear-gradient(#a1b044, #485600);
-    border-color: #704300 #704300 hsl(36, 100%, 17%);
-    color: #fff !important;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow: 0px 0px 10px 2px #485600;
-    -webkit-box-shadow: 0px 0px 10px 2px #485600;
-    box-shadow: 0px 0px 10px 2px #485600;
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    border:6px solid #787f32;
-    display:inline-block;
-    cursor:pointer;
-    font-size: 2em;
-    
-  }
-
-  #rumbtn {
-    background-color: hsl(36, 100%, 22%) !important;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12654d", endColorstr="#0c2115");
-    background-image: -khtml-gradient(linear, left top, left bott0om, from(#12654d), to(#0c2115));
-    background-image: -moz-linear-gradient(top, #12654d, #0c2115);
-    background-image: -ms-linear-gradient(top, #12654d, #0c2115);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #12654d), color-stop(100%, #0c2115));
-    background-image: -webkit-linear-gradient(top, #12654d, #0c2115);
-    background-image: -o-linear-gradient(top, #12654d, #0c2115);
-    background-image: linear-gradient(#12654d, #0c2115);
-    border-color: #704300 #704300 hsl(36, 100%, 17%);
-    color: #fff !important;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow: 0px 0px 10px 2px #12654d;
-    -webkit-box-shadow: 0px 0px 10px 2px #12654d;
-    box-shadow: 0px 0px 10px 2px #12654d;
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    border:6px solid #0c3d2e;
-    display:inline-block;
-    cursor:pointer;
-    font-size: 2em;
-    
-  }
-
-
-  #ginbtn {
-    background-color: hsl(36, 100%, 22%) !important;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#45749d", endColorstr="#152c3b");
-    background-image: -khtml-gradient(linear, left top, left bott0om, from(#45749d), to(#152c3b));
-    background-image: -moz-linear-gradient(top, #45749d, #152c3b);
-    background-image: -ms-linear-gradient(top, #45749d, #152c3b);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #45749d), color-stop(100%, #152c3b));
-    background-image: -webkit-linear-gradient(top, #45749d, #152c3b);
-    background-image: -o-linear-gradient(top, #45749d, #152c3b);
-    background-image: linear-gradient(#45749d, #152c3b);
-    border-color: #704300 #704300 hsl(36, 100%, 17%);
-    color: #fff !important;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow: 0px 0px 10px 2px #45749d;
-    -webkit-box-shadow: 0px 0px 10px 2px #45749d;
-    box-shadow: 0px 0px 10px 2px #45749d;
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    border:6px solid #355975;
-    display:inline-block;
-    cursor:pointer;
-    font-size: 2em;
-    
-  }
-
-
- 
 
 #pg2 {
+
     display: none;
-    background-color: #56b2a9;
 }
 
-#search-button {
-  width: 150px;
-  text-align: center;
-  margin:20px auto;
-  padding: 10px;
-}
-
-#category-buttons {
-text-align: center;
-padding: 10px;
-}
-
-#form-button {
-  text-align: center;
-  padding: 10px;
-  }
 
 #button-addon3 {
+
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: hsl(36, 100%, 22%) !important;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12654d", endColorstr="#0c2115");
-    background-image: -khtml-gradient(linear, left top, left bott0om, from(#12654d), to(#0c2115));
-    background-image: -moz-linear-gradient(top, #12654d, #0c2115);
-    background-image: -ms-linear-gradient(top, #12654d, #0c2115);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #12654d), color-stop(100%, #0c2115));
-    background-image: -webkit-linear-gradient(top, #12654d, #0c2115);
-    background-image: -o-linear-gradient(top, #12654d, #0c2115);
-    background-image: linear-gradient(#12654d, #0c2115);
-    border-color: #704300 #704300 hsl(36, 100%, 17%);
-    color: #fff !important;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow: 0px 0px 10px 2px #12654d;
-    -webkit-box-shadow: 0px 0px 10px 2px #12654d;
-    box-shadow: 0px 0px 10px 2px #12654d;
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    border:6px solid #0c3d2e;
-    display:inline-block;
-    cursor:pointer;
-    font-size: 2em;
+}
+
+
+/* BEGIN FOOTER */
+.footer {
+    /* Positioning */
+    position: absolute;
+   
     
-}
-
-#main-content {
-  padding-bottom: 0px;
-}
-
-#jumbo-text {
-  font-family: 'Dosis', sans-serif;
-  color: white;
-}
-
-#drinkName {
-  font-family: 'Special Elite', cursive;
-  font-size: 30px;
-}
-
-#ingredients {
-  font-family: 'Playfair Display SC', serif;
-  font-size: 30px;
-}
-
-#mainIngr {
-  font-family: 'Special Elite', cursive;
-}
-
-#boozeID {
-  font-family: 'Special Elite', cursive;
-}
-
-#instructions {
-  font-family: 'Economica', sans-serif;
-  font-size: 200%;
-}
-
-body {
-  background-color: #56b2a9;
+    /* Box-model */
+    width: 100%;
+    height: 60px;
   
-}
-
-#formJumbo {
-  text-align: center;
-  font-family: 'Special Elite', cursive;
-}
-
-#formPage {
-  font-family: 'Special Elite', cursive;
-}
+    /* Visual */
+    background-color: #666;
+  }
+  
+  .text-muted-footer {
+    /* Box-model */
+    margin-top: 15px;
+  
+    /* Typography */
+    color: white;
+  }
+  
+  .two-toned-footer-color {
+    /* Box-model */
+    height: 6px;
+    padding-top: 3px;
+  
+    /* Visual */
+    background-color: #4aaaa5;
+  }
+  /* END FOOTER */

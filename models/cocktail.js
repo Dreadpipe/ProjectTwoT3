@@ -9,23 +9,14 @@ module.exports = function(sequelize, DataTypes) {
     drinkName: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        notEmpty: true,
-      }
     },
     ingredients: {
       type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        notEmpty: true,
-      }
     },
     instructions: {
       type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        notEmpty: true,
-      }
     }
   });
   return Cocktail;
